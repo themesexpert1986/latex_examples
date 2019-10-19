@@ -6,6 +6,8 @@ For Linux and MacOs, see online google docs.<br>
 
 Theses examples are sources code of examples that was presented in the book: "Latex và các ứng dụng" written in vietnamese, 500 pages, by author Doan Quang Tuyen. (name of book in english is "Latex and applications)<br>
 
+<img src="./docs/cover.png" width="600">
+
 Enjoy!
 
 Doan Quang Tuyen.
