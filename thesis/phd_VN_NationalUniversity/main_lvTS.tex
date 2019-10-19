@@ -1,0 +1,151 @@
+\documentclass[a4paper,14pt, twoside, openright]{extreport}
+
+\usepackage{times}
+\usepackage{mathptmx}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+ 
+\usepackage[bottom=2.5cm, top=2.5cm, inner=3.5cm, outer=2cm]{geometry}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+
+\usepackage[intoc]{nomencl}
+
+\usepackage{indentfirst} 
+
+\usepackage{fancyhdr}
+
+\usepackage[defernumbers, backend=biber, style=numeric, citestyle = numeric-comp, sorting = nty]{biblatex} 
+	\addbibresource{bibtex/biblio_vn.bib} 
+	\addbibresource{bibtex/biblio_en.bib}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic} 
+
+\usepackage[toc]{appendix}
+
+\usepackage{tocloft}
+
+
+\input{definition/definition.tex} 
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}
+\author{Đoàn Quang Tuyền}
+\nganh{Vật lý}
+\chuyennganh{Vật lý hạt nhân}
+\maso{101.102.3}
+\nam{2015}
+\thayhuongdan{
+	1. TS. Nguyễn Văn A\\ 
+	2. TS. Nguyễn Văn B\\
+	3. TS. Nguyễn Văn C
+}
+
+% bắt đầu phần nội dung của luận án
+\begin{document}    
+
+\pagestyle{empty}%*\label{line:lvTiensi_main_empty}*)
+	\lfoot[]{}
+	\rfoot[]{}
+
+\maketitle
+
+\cleardoublepage
+\maketitleTrangphu
+
+\input{texfile/loicamdoan}
+\input{texfile/loicamon}
+
+\clearHeading
+	\lfoot[\thepage]{}
+	\rfoot[]{\thepage}
+\setcounter{page}{1}
+\pagenumbering{roman}%*\label{line:lvTiensi_main_pagenumbering_rm}*)
+ 
+\makeatletter
+\renewcommand{\cftmarktoc}{\markboth{\sl \@title}{\sl \contentsname}}%*\xdyIndex{cftmarktoc@\spverb\cftmarktoc}*)
+\makeatother
+\tableofcontents
+\clearHeading
+
+\makenomenclature
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}%*\xdyIndex{nomname@\spverb\nomname}*)
+\makeatletter
+\markboth{\sl \@title}{\sl \nomname}
+\makeatother
+\printnomenclature
+\clearHeading
+
+\phantomsection
+\renewcommand{\listfigurename}{Danh mục các hình vẽ}%*\label{line:lvTiensi_main_hv}\xdyIndex{listfigurename@\spverb\listfigurename}*)
+\makeatletter
+\renewcommand{\cftmarklof}{\markboth{\sl \@title}{\sl \listfigurename}}%*\xdyIndex{cftmarklof@\spverb\cftmarklof}*)
+\makeatother
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+\clearHeading
+
+\phantomsection
+\renewcommand{\listtablename}{Danh mục các bảng biểu}%*\xdyIndex{listtablename@\spverb\listtablename}*)
+\makeatletter
+\renewcommand{\cftmarklot}{\markboth{\sl \@title}{\sl \listtablename}}%*\xdyIndex{cftmarklot@\spverb\cftmarklot}*)
+\makeatother
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+\clearHeading%*\label{line:lvTiensi_main_bang}*)
+
+ \setcounter{page}{1}
+ \pagenumbering{arabic}%*\label{line:lvTiensi_main_pagenumbering_ar}*)
+
+	\input{texfile/modau}
+	\clearHeading
+	
+	\input{texfile/tongquan}
+	\clearHeading
+	
+	\input{texfile/doituongnghiencuu}
+	\clearHeading
+	
+	\input{texfile/ketquavathaoluan}	
+	\clearHeading
+	
+	\input{texfile/ketluan}
+	\clearHeading
+	
+	\input{texfile/danhmuccongtrinhKH}
+	\clearHeading
+	
+\defbibheading{tiengViet}{
+ 	\section*{Tài liệu tiếng Việt}
+ 	\markboth{\sl Tài liệu tham khảo}{\sl Tài liệu tiếng Việt}
+ 	\addcontentsline{toc}{section}{Tài liệu tiếng Việt}
+ }
+ 
+ \defbibheading{tiengAnh}{
+ 	\section*{Tài liệu tiếng Anh}
+ 	\markboth{\sl Tài liệu tham khảo}{\sl Tài liệu tiếng Anh}
+ 	\addcontentsline{toc}{section}{Tài liệu tiếng Anh}
+ }
+ 
+\printbibheading[heading=bibintoc, title = {Tài liệu tham khảo}]
+	\printbibliography[heading=tiengViet, keyword=VN]
+	\printbibliography[heading=tiengAnh, keyword=EN]
+\clearHeading
+
+\renewcommand{\appendixtocname}{Phụ lục}
+\addappheadtotoc
+\renewcommand{\chaptername}{\appendixname}
+ 
+\appendix
+	\input{texfile/phuluc_cacdothi}
+	\clearHeading
+	\input{texfile/phuluc_cacsolieu}
+	\clearHeading
+ 
+\end{document}

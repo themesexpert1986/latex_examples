@@ -1,0 +1,88 @@
+\documentclass[final, 5p,12pt]{elsarticle}
+
+\usepackage{standalone}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+ 
+%\usepackage[bottom = 2.5cm, top = 2.5cm, inner= 2cm, outer = 1.5cm]{geometry}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+  
+\usepackage{times}
+\usepackage{mathptmx}
+
+\usepackage{xcolor}
+%\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+\usepackage[linkbordercolor=white,citebordercolor=white,urlbordercolor=white ,breaklinks, pdfencoding=unicode]{hyperref}
+
+\usepackage{import}
+
+
+
+\journal{Nuclear Physics B}
+
+
+
+%\usepackage{fancyhdr}
+%%\pagestyle{fancy}
+%\makeatletter
+%\let\ps@plain\ps@fancy 
+%\makeatother
+%\fancyhf{}
+%\fancyfoot[C]{\copyright 2016 Viện Vật lý}
+%\fancyhead[C]{Nuclear Science and Technology, Vol.5, No. 4 (2015), pp. 01-08}
+%\renewcommand{\headrulewidth}{0pt}
+
+%%%%%%%%%%%%%
+\begin{document}
+
+
+\begin{titlepage} 
+
+\newgeometry{top=2cm,bottom=2cm,left=2.5cm,right=2.5cm}	
+
+\begin{center}
+\bfseries
+{\Large Viện Vật lý\\
+\rule{0.6\textwidth}{1.pt}} 
+
+\vfill
+
+{\Huge Kỷ yếu hội nghị các nhà khoa học trẻ} 
+
+\vfill
+
+{\Large  Tiểu ban: Vật lý hạt nhân và ứng dụng} 
+
+\vfill
+
+{\large Vol. 4 - 2016}
+\end{center} 
+\end{titlepage}
+
+\clearpage
+ 
+%\journalcontents
+
+%\oddrunhead{Kỷ yếu hội nghị các nhà khoa học trẻ, Vol. 4, 2016.}
+%\evenrunhead{Kỷ yếu hội nghị các nhà khoa học trẻ, Vol. 4, 2016.}
+
+%\thispagestyle{fancy}
+%\subimport{input/dqtuyen/}{dqtuyen.tex} 
+%\subimport{input/dqtuyen/}{dqtuyen.bbl} 
+%
+%\subimport{input/ttvien/}{ttvien.tex} 
+%\subimport{input/ttvien/}{ttvien.bbl} 
+
+\subimport{input/elsevierphysB/}{elsarticle2cols.tex} 
+\subimport{input/elsevierphysB/}{elsarticle2cols.bbl}
+
+\subimport{input/elsevierphysB2/}{elsarticle2cols2.tex} 
+\subimport{input/elsevierphysB2/}{elsarticle2cols2.bbl} 
+
+
+\end{document}

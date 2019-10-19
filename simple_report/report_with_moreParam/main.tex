@@ -1,0 +1,72 @@
+\documentclass[a4paper, 14pt, twoside, openright]{extreport}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+
+\usepackage[bottom=2.5cm, top=2.5cm, left=3cm, right =2cm]{geometry}
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+
+\usepackage[intoc]{nomencl}
+
+\usepackage{indentfirst}
+
+	\input{definition/definition.tex}
+
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}
+\author{Đoàn Quang Tuyền}
+
+% bắt đầu phần nội dung của báo cáo
+\begin{document}
+\pagestyle{empty} 
+\maketitle  
+  
+\cleardoublepage
+\pagestyle{plain} 
+\setcounter{page}{1}
+\tableofcontents
+
+\makenomenclature	
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}    
+\printnomenclature
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\listfigurename}{Danh mục các hình vẽ}
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\listtablename}{Danh mục các bảng biểu}
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+	\input{texfile/modau}
+	\input{texfile/cosolythuyet}
+	\input{texfile/phuongphapthucnghiem}
+	\input{texfile/ketquaphantich}	
+	\input{texfile/ketluan}
+	
+\cleardoublepage
+\phantomsection
+\renewcommand{\bibname}{Tài liệu tham khảo}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{ieeetr}
+\bibliography{bibtex/biblio} 
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\appendixname}{Phụ lục}
+\addcontentsline{toc}{chapter}{\appendixname}
+\renewcommand{\chaptername}{\appendixname}
+
+\appendix
+	\input{texfile/phuluc_cacdothi}
+	\input{texfile/phuluc_cacsolieu}
+
+\end{document}

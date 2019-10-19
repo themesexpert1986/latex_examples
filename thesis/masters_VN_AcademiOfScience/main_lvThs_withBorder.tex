@@ -1,0 +1,143 @@
+\documentclass[a4paper,14pt, twoside, openright]{extreport}
+
+\usepackage{times}
+\usepackage{mathptmx}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+ 
+\usepackage[bottom = 2.5cm, top = 2.5cm, inner= 3.5cm, outer = 2cm]{geometry}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+
+%\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+%cho bản in
+\usepackage{xcolor} % sử dụng khai báo màu
+\usepackage[colorlinks, linkcolor = black, citecolor = black, urlcolor = black,  breaklinks, pdfencoding=unicode]{hyperref}
+
+\usepackage[intoc]{nomencl}
+
+\usepackage{indentfirst}% tạo indent ở đoạn đầu tiên 
+
+\usepackage{fancyhdr}
+
+\usepackage[defernumbers, backend=biber, style=numeric, citestyle = numeric-comp, sorting = nty]{biblatex} 
+	\addbibresource{bibtex/biblio_vn.bib} 
+	\addbibresource{bibtex/biblio_en.bib}
+
+\usepackage{tikz}%ve hinh
+\usetikzlibrary{calc}
+\usepackage{eso-pic} 
+
+\usepackage[toc]{appendix}
+
+\usepackage{tocloft}
+
+\input{definition/definition.tex}
+\input{definition/definition_border.tex} 
+
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}
+\author{Đoàn Quang Tuyền}
+\chuyennganh{Vật lý hạt nhân}
+\maso{101.102.3}
+\nam{2015}
+\thayhuongdan{TS. Nguyễn Văn A}
+
+\begin{document}  
+
+\pagestyle{empty}
+\lfoot[]{}
+\rfoot[]{}
+
+\maketitle
+
+\cleardoublepage
+\maketitleTrangphu
+
+	\input{texfile/loicamdoan}
+
+\cleardoublepage
+\tableofcontents
+
+\clearHeading
+ \lfoot[\thepage]{}
+ \rfoot[]{\thepage}
+ \setcounter{page}{1}%*\label{line:lvthacsiHLKHVN_main_setcounter}*)
+ \pagenumbering{roman}%*\label{line:lvthacsiHLKHVN_main_setcounter_rm}*)
+ 
+\makenomenclature
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}
+\makeatletter
+	\markboth{\sl \@title}{\sl \nomname}
+\makeatother
+\printnomenclature
+\clearHeading
+
+\phantomsection
+\renewcommand{\listfigurename}{Danh mục các hình vẽ}
+\makeatletter
+\renewcommand{\cftmarklof}{\markboth{\sl \@title}{\sl \listfigurename}}
+\makeatother
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+\clearHeading
+
+\phantomsection
+\renewcommand{\listtablename}{Danh mục các bảng biểu}
+\makeatletter
+\renewcommand{\cftmarklot}{\markboth{\sl \@title}{\sl \listtablename}}
+\makeatother
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+\clearHeading
+
+\clearHeading
+ \setcounter{page}{1}%*\label{line:lvthacsiHLKHVN_main_setcounter1}*)
+ \pagenumbering{arabic}%*\label{line:lvthacsiHLKHVN_main_setcounter1_ar}*)
+
+	\input{texfile/modau}
+	\clearHeading
+	
+	\include{texfile/tongquan_border}
+	\clearHeading
+	
+	\input{texfile/doituongnghiencuu}
+	\clearHeading
+		
+	\input{texfile/ketquavathaoluan}	
+	\clearHeading
+
+	\input{texfile/ketluan}
+	\clearHeading
+	
+\defbibheading{tiengViet}{ 
+	\section*{Tài liệu tiếng Việt}
+	\markboth{\sl Tài liệu tham khảo}{\sl Tài liệu tiếng Việt}
+	\addcontentsline{toc}{section}{Tài liệu tiếng Việt}
+}
+
+\defbibheading{tiengAnh}{
+	\section*{Tài liệu tiếng Anh}
+	\markboth{\sl Tài liệu tham khảo}{\sl Tài liệu tiếng Anh}
+	\addcontentsline{toc}{section}{Tài liệu tiếng Anh}
+}
+
+\printbibheading[heading=bibintoc, title = {Tài liệu tham khảo}] 
+\printbibliography[heading=tiengViet, keyword=VN]
+\printbibliography[heading=tiengAnh, keyword=EN]
+\clearHeading
+
+\renewcommand{\appendixtocname}{Phụ lục}
+\addappheadtotoc
+\renewcommand{\chaptername}{\appendixname}
+
+\appendix
+	\input{texfile/phuluc_cacdothi}
+	\clearHeading
+	\input{texfile/phuluc_cacsolieu}
+	\clearHeading
+     
+\end{document}

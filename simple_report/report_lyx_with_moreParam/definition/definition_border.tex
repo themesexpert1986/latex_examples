@@ -1,0 +1,83 @@
+% use to make a border arround page and text area
+
+\usepackage{tikz}%ve hinh
+\usepackage{fancybox,pause,time,pgf}
+\usetikzlibrary{arrows,shapes,backgrounds,scopes,shadows,snakes,calc, trees}
+\makeatletter% de tranh conflict voi verbatim
+\global\let\tikz@ensure@dollar@catcode=\relax
+\makeatother
+\usepackage{xcolor} % Required for specifying colors by name
+
+
+\usepackage{pdflscape}%rotate some .pdf page in landscape mode. Dùng \begin{landscape} %rotate pdf file
+\usepackage{rotating} %%figure in landscape mode co the dung rotfloat package (for 1 page) %\begin{sidewaystable}%\begin{sidewaysfigure}
+\usepackage{eso-pic} 
+
+
+%% background letter in each page
+\definecolor{lightgray}{gray}{.9}
+
+
+\AddToShipoutPicture{%
+% 
+%	\AtTextCenter{%
+%	\makebox(0,0)[c]{\resizebox{\textwidth}{!}{%
+%	\rotatebox{45}{\textsf{\textbf{\color{lightgray}\textcopyright. Đoàn Quang Tuyền}}}
+%	}}}
+%%	
+%	\AtTextCenter{%
+%	\makebox(0,0)[c]{\resizebox{\textwidth}{!}{%
+%	\rotatebox{-45}{\textsf{\textbf{\color{lightgray}\textcopyright. Đoàn Quang Tuyền}}}
+%	}}}
+%%	
+%	\AtPageLowerLeft{
+%	\parbox[b][2\baselineskip][c]{\paperwidth}{
+%          \centering
+%          \textcopyright~\today{}, Đoàn Quang Tuyền
+%      }
+%      }
+%      
+%     \AtPageLowerLeft{
+%	 \rotatebox{90}{%
+%        \begin{minipage}{\paperheight}
+%          \centering
+%          \textcopyright~\today{}, Đoàn Quang Tuyền
+%       \end{minipage} %
+%      }
+%      }
+
+\AtTextCenter{%
+\makebox(0,0)[c]{
+\begin{tikzpicture}
+\draw[color = green!30](\textwidth,\textheight)rectangle(0,0);
+\end{tikzpicture}
+	}
+	}
+      
+
+\AtTextCenter{%
+\makebox(0,0)[c]{
+%left = (P+L-R)/2
+%right = (P-L+R)/2
+%oddpage: L = oddmargin, R = evenmargin, left = P+odd-even, right = P-odd+even 
+%evenpage: L = evenmargin, R = oddmargin, left = P-odd+even, right = P+odd-even
+%maxDiff = (odd-even)/2
+\begin{tikzpicture}
+\draw[color = red, line width = 1.5pt]%
+(-0.5\paperwidth-0.5\oddsidemargin+0.5\evensidemargin, -0.5\paperheight)rectangle%
+(0.5\paperwidth+0.5\oddsidemargin-0.5\evensidemargin, 0.5\paperheight);
+
+\ifthenelse{\isodd{\value{page}}}{
+\draw[color = red, line width = 1.5pt]%
+(-0.5\paperwidth-0.5\oddsidemargin+0.5\evensidemargin, -0.5\paperheight)rectangle%
+(0.5\paperwidth-0.5\oddsidemargin+0.5\evensidemargin, 0.5\paperheight);
+}{
+\draw[color = red, line width = 1.5pt]%
+(-0.5\paperwidth+0.5\oddsidemargin-0.5\evensidemargin, -0.5\paperheight)rectangle%
+(0.5\paperwidth+0.5\oddsidemargin-0.5\evensidemargin, 0.5\paperheight);
+}
+\end{tikzpicture}
+}
+}
+
+ }

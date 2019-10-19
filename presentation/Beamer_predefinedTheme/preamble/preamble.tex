@@ -1,0 +1,251 @@
+\usepackage[T1, T2A,T2B,T2C,T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, french, russian, main = vietnamese]{babel}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{trees, backgrounds, arrows, shapes, shadows, calc, fpu}
+
+\newlength\picH
+\newlength\picW
+\newlength\picL
+\newlength\pit
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Cấu trúc hạt nhân 156Gd]{Ứng dụng phổ $\gamma$ trong nghiên cứu cấu trúc hạt nhân 156Gd}
+\author[D.Q. Tuyền]{Đoàn Quang Tuyền}
+\institute[IPNL]{Viện nghiên cứu hạt nhân Lyon, Pháp \\  4 Rue Enrico Fermi, 69622 Villeurbanne, France}
+\date[Zakopane, 2008]{Zakopane, Ba lan, 1-7/09/2008} 
+
+\AtBeginSection[] 
+{
+\begin{frame}{Các nội dung chính}
+  \tableofcontents[currentsection]
+\end{frame}
+\addtocounter{framenumber}{-1}
+}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%
+
+% trích dẫn các mã nguồn với tiếng việt 
+\usepackage{listings} 
+
+\lstdefinestyle{setframe}{frame = single,  numbers=left}
+
+\lstdefinestyle{nonframe}{frame=none,  numbers=none}
+
+\lstset{escapeinside={\%*}{*)}} % các ký tự đặt giữa %* và *) sẽ không được hiểu là đoạn mã nguồn cần trích dẫn, do vậy ta có thể đưa vào đó các lệnh Latex cần thiết, chẳng hạn khi trích dẫn chính đoạn mã nguồn của môi trường \textbf{lstlisting}, ta thực hiện 
+%  %*{\footnotesize\verb'\end{lstlisting}'}*)
+
+\lstset{%
+    basicstyle=\linespread{0.7}\ttfamily\footnotesize,
+    breaklines=true,
+    breakindent = 0pt,
+    numbers=left,
+    numberblanklines = false,
+%    frame=trBL,
+	frame = single,
+%    framextopmargin=5pt,
+	xleftmargin = 10pt,
+    xrightmargin = 5pt,
+    literate=%"Minimal steps to typeset Vietnamese" của Hàn Thế Thành
+{Ă}{{\ABREVE}}1
+{Ă}{{\Abreve}}1
+{Â}{{\ACIRCUMFLEX}}1
+{Â}{{\Acircumflex}}1
+{Đ}{{\DJ}}1
+{Ê}{{\ECIRCUMFLEX}}1
+{Ê}{{\Ecircumflex}}1
+{Ô}{{\Ocircumflex}}1
+{Ô}{{\OCIRCUMFLEX}}1
+{Ơ}{{\OHORN}}1
+{Ơ}{{\Ohorn}}1
+{Ư}{{\UHORN}}1
+{Ư}{{\Uhorn}}1
+{ă}{{\abreve}}1
+{â}{{\acircumflex}}1
+{đ}{{\dj}}1
+{ê}{{\ecircumflex}}1
+{ı}{{\i}}1
+{ô}{{\ocircumflex}}1
+{ơ}{{\ohorn}}1
+{ư}{{\uhorn}}1
+{Á}{{\'A}}1
+{É}{{\'E}}1
+{Í}{{\'I}}1
+{Ó}{{\'O}}1
+{Ú}{{\'U}}1
+{Ý}{{\'Y}}1
+{Ắ}{{\'\ABREVE}}1
+{Ắ}{{\'\Abreve}}1
+{Ấ}{{\'\ACIRCUMFLEX}}1
+{Ấ}{{\'\Acircumflex}}1
+{Ế}{{\'\ECIRCUMFLEX}}1
+{Ế}{{\'\Ecircumflex}}1
+{Ố}{{\'\OCIRCUMFLEX}}1
+{Ố}{{\'\Ocircumflex}}1
+{Ớ}{{\'\OHORN}}1
+{Ớ}{{\'\Ohorn}}1
+{Ứ}{{\'\UHORN}}1
+{Ứ}{{\'\Uhorn}}1
+{ắ}{{\'\abreve}}1
+{ấ}{{\'\acircumflex}}1
+{ế}{{\'\ecircumflex}}1
+{ố}{{\'\ocircumflex}}1
+{ớ}{{\'\ohorn}}1
+{ứ}{{\'\uhorn}}1
+{á}{{\'a}}1
+{é}{{\'e}}1
+{í}{{\'i}}1
+{ó}{{\'o}}1
+{ú}{{\'u}}1
+{ý}{{\'y}}1
+{Â}{{\^A}}1
+{Ê}{{\^E}}1
+{Ô}{{\^O}}1
+{â}{{\^a}}1
+{ê}{{\^e}}1
+{ô}{{\^o}}1
+{À}{{\`A}}1
+{È}{{\`E}}1
+{Ì}{{\`I}}1
+{Ò}{{\`O}}1
+{Ù}{{\`U}}1
+{Ỳ}{{\`Y}}1
+{Ằ}{{\`\ABREVE}}1
+{Ằ}{{\`\Abreve}}1
+{Ầ}{{\`\ACIRCUMFLEX}}1
+{Ầ}{{\`\Acircumflex}}1
+{Ề}{{\`\ECIRCUMFLEX}}1
+{Ề}{{\`\Ecircumflex}}1
+{Ồ}{{\`\OCIRCUMFLEX}}1
+{Ồ}{{\`\Ocircumflex}}1
+{Ờ}{{\`\OHORN}}1
+{Ờ}{{\`\Ohorn}}1
+{Ừ}{{\`\UHORN}}1
+{Ừ}{{\`\Uhorn}}1
+{ằ}{{\`\abreve}}1
+{ầ}{{\`\acircumflex}}1
+{ề}{{\`\ecircumflex}}1
+{ồ}{{\`\ocircumflex}}1
+{ờ}{{\`\ohorn}}1
+{ừ}{{\`\uhorn}}1
+{à}{{\`a}}1
+{è}{{\`e}}1
+{ì}{{\`i}}1
+{ò}{{\`o}}1
+{ù}{{\`u}}1
+{ỳ}{{\`y}}1
+{Ạ}{{\d A}}1
+{Ẹ}{{\d E}}1
+{Ị}{{\d I}}1
+{Ọ}{{\d O}}1
+{Ụ}{{\d U}}1
+{Ỵ}{{\d Y}}1
+{Ặ}{{\d \ABREVE}}1
+{Ặ}{{\d \Abreve}}1
+{Ậ}{{\d \ACIRCUMFLEX}}1
+{Ậ}{{\d \Acircumflex}}1
+{Ệ}{{\d \ECIRCUMFLEX}}1
+{Ệ}{{\d \Ecircumflex}}1
+{Ộ}{{\d \OCIRCUMFLEX}}1
+{Ộ}{{\d \Ocircumflex}}1
+{Ợ}{{\d \OHORN}}1
+{Ợ}{{\d \Ohorn}}1
+{Ự}{{\d \UHORN}}1
+{Ự}{{\d \Uhorn}}1
+{ặ}{{\d \abreve}}1
+{ậ}{{\d \acircumflex}}1
+{ệ}{{\d \ecircumflex}}1
+{ộ}{{\d \ocircumflex}}1
+{ợ}{{\d \ohorn}}1
+{ự}{{\d \uhorn}}1
+{ạ}{{\d a}}1
+{ẹ}{{\d e}}1
+{ị}{{\d i}}1
+{ọ}{{\d o}}1
+{ụ}{{\d u}}1
+{ỵ}{{\d y}}1
+{Ả}{{\h A}}1
+{Ẻ}{{\h E}}1
+{Ỉ}{{\h I}}1
+{Ỏ}{{\h O}}1
+{Ủ}{{\h U}}1
+{Ỷ}{{\h Y}}1
+{Ẳ}{{\h \ABREVE}}1
+{Ẳ}{{\h \Abreve}}1
+{Ẩ}{{\h \ACIRCUMFLEX}}1
+{Ẩ}{{\h \Acircumflex}}1
+{Ể}{{\h \ECIRCUMFLEX}}1
+{Ể}{{\h \Ecircumflex}}1
+{Ổ}{{\h \OCIRCUMFLEX}}1
+{Ổ}{{\h \Ocircumflex}}1
+{Ở}{{\h \OHORN}}1
+{Ở}{{\h \Ohorn}}1
+{Ử}{{\h \UHORN}}1
+{Ử}{{\h \Uhorn}}1
+{ẳ}{{\h \abreve}}1
+{ẩ}{{\h \acircumflex}}1
+{ể}{{\h \ecircumflex}}1
+{ổ}{{\h \ocircumflex}}1
+{ở}{{\h \ohorn}}1
+{ử}{{\h \uhorn}}1
+{ả}{{\h a}}1
+{ẻ}{{\h e}}1
+{ỉ}{{\h i}}1
+{ỏ}{{\h o}}1
+{ủ}{{\h u}}1
+{ỷ}{{\h y}}1
+{Ã}{{\~A}}1
+{Ẽ}{{\~E}}1
+{Ĩ}{{\~I}}1
+{Õ}{{\~O}}1
+{Ũ}{{\~U}}1
+{Ỹ}{{\~Y}}1
+{Ẵ}{{\~\ABREVE}}1
+{Ẵ}{{\~\Abreve}}1
+{Ẫ}{{\~\ACIRCUMFLEX}}1
+{Ẫ}{{\~\Acircumflex}}1
+{Ễ}{{\~\ECIRCUMFLEX}}1
+{Ễ}{{\~\Ecircumflex}}1
+{Ỗ}{{\~\OCIRCUMFLEX}}1
+{Ỗ}{{\~\Ocircumflex}}1
+{Ỡ}{{\~\OHORN}}1
+{Ỡ}{{\~\Ohorn}}1
+{Ữ}{{\~\UHORN}}1
+{Ữ}{{\~\Uhorn}}1
+{ẵ}{{\~\abreve}}1
+{ẫ}{{\~\acircumflex}}1
+{ễ}{{\~\ecircumflex}}1
+{ỗ}{{\~\ocircumflex}}1
+{ỡ}{{\~\ohorn}}1
+{ữ}{{\~\uhorn}}1
+{ã}{{\~a}}1
+{ẽ}{{\~e}}1
+{ĩ}{{\~i}}1
+{õ}{{\~o}}1
+{ũ}{{\~u}}1
+{ỹ}{{\~y}}1
+{≥}{{$\geq$}}1%Tuyền bổ sung. bất kỳ ký hiệu nào cần đưa vào trong listing.
+{:́}{{\':}}1%Tuyền bổ sung. bất kỳ ký hiệu nào cần đưa vào trong listing.
+}
+
+% for listings package
+%not count empty line (such as countblanklines option defined by user)
+% linerange in \lstinputlisting doesn't work, it still counts blank line when chosing a set of lines
+% xác lập để không tăng số dòng trên các dòng trắng trong môi trường lstlisting
+\makeatletter 
+\lst@AddToHook{OnEmptyLine}{\addtocounter{lstnumber}{-1}}% Remove line number increment from listings
+\makeatother

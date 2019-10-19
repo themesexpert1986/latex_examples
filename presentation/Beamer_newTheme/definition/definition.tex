@@ -1,0 +1,91 @@
+% hiển thị Mục lục khi bắt đầu một Mục mới
+\AtBeginSection[] %*\label{line:baitrinhbay_newthem_definition_AtBeginSection}*)
+{
+	\begin{frame}{Các nội dung chính}
+ 		\tableofcontents[currentsection]
+	\end{frame}
+\addtocounter{framenumber}{-1}
+}%*\label{line:baitrinhbay_newthem_definition_AtBeginSection_end}*)
+
+% căn lề
+\setbeamersize{text margin left = 10pt}%*\label{line:baitrinhbay_newthem_definition_leftmargin}*)
+\setbeamersize{text margin right=20pt}%*\label{line:baitrinhbay_newthem_definition_rightmargin}*)
+
+% thanh dọc bên trái của slide
+\setbeamersize{sidebar width left=0.03\paperwidth}%*\label{line:baitrinhbay_newthem_definition_sidebar}*)
+\setbeamertemplate{sidebar canvas left}[vertical shading] [middle=blue!10!green!70]%*\label{line:baitrinhbay_newthem_definition_sidebar_color}*)
+
+
+% tiêu đề
+\setbeamerfont{title}{size = \Large, shape=\bfseries, family=\rmfamily}%*\label{line:baitrinhbay_newthem_definition_fonttitle}*)
+\setbeamercolor{title}{fg=red!80!black, bg=blue!5!white}
+
+% tiêu đề hiển thị trong phần chú thích
+\setbeamercolor{title in head/foot}{fg=red!50!black!50}
+\setbeamerfont{title in head/foot}{size = \footnotesize, shape=\slshape, family=\rmfamily}
+
+
+% tên tác giả
+\setbeamercolor{author}{fg=blue!80!black}
+\setbeamerfont{author}{shape=\bfseries, family=\rmfamily}
+
+% tên tác giả hiển thị trong phần chú thích
+\setbeamercolor{author in head/foot}{fg=blue!70!black!50}
+\setbeamerfont{author in head/foot}{size = \footnotesize, shape=\slshape, family=\rmfamily}
+% ngày, tháng
+\setbeamercolor{date}{fg=blue!80!black}
+\setbeamerfont{date}{size=\scriptsize, shape=\bfseries,family=\rmfamily}
+
+% ngày tháng hiển thị trong phần chú thích %%
+\setbeamercolor{date in head/foot}{fg=blue!50!black!50}
+\setbeamerfont{date in head/foot}{shape=\slshape, family=\rmfamily}
+
+
+% địa chỉ
+\setbeamercolor{institute}{fg=blue!80!black}
+\setbeamerfont{institute}{size=\scriptsize, shape=\bfseries,family=\rmfamily}
+
+
+% tiêu đề của Mục trong Mục lục
+\setbeamertemplate{section in toc}[ball unnumbered]
+\setbeamercolor{section in toc}{fg=red!80!black}
+\setbeamerfont{section in toc}{shape=\bfseries, family=\rmfamily, size = \large}
+
+% tiêu đề của tiểu Mục trong Mục lục
+\setbeamertemplate{subsection in toc}[ball unnumbered]
+\setbeamercolor{subsection in toc}{fg=blue!80!black}
+\setbeamerfont{subsection in toc}{shape=\bfseries, family=\rmfamily}%*\label{line:baitrinhbay_newthem_definition_fontToc}*)
+
+
+% tiêu đề của các slide
+\setbeamertemplate{frametitle}{%*\label{line:baitrinhbay_newthem_definition_frametitle}*)
+	\vspace{5pt}
+	\insertframetitle \hfill \color{red!50} \footnotesize\tdtime
+	\vspace{1pt}
+	\hrule
+}
+\setbeamercolor{frametitle}{fg=red!80!black}%*\label{line:baitrinhbay_newthem_definition_frametitle_color}*)
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries, family=\rmfamily}%*\label{line:baitrinhbay_newthem_definition_frametitle_font}*)
+
+
+% phần nội dung chú thích phía dưới các slide
+\setbeamertemplate{footline}%*\label{line:baitrinhbay_newthem_definition_footline}*)
+{
+\begin{beamercolorbox}[leftskip=0.2\paperwidth, rightskip=0.02\paperwidth] {author in head/foot}
+	\usebeamerfont{author in head/foot}\insertshortauthor
+	\hfill
+   	\usebeamerfont{title in head/foot}\insertshorttitle
+    \hfill
+    {\bfseries\normalsize\color{red!50}\insertframenumber/ \inserttotalframenumber}%*\label{line:baitrinhbay_newthem_definition_footline_red}*)
+ \end{beamercolorbox}
+}%*\label{line:baitrinhbay_newthem_definition_footline_end}*)
+
+
+% định dạng của môi trường  block
+\setbeamertemplate{blocks}[rounded][shadow=true]%*\label{line:baitrinhbay_newthem_definition_blocks}*)
+
+\setbeamercolor{block title}{ bg=green!5!white, fg=red!80!black}
+\setbeamerfont{block title}{size=\small, shape=\bfseries, family=\rmfamily}
+
+\setbeamercolor{block body}{ fg=blue!80!black}
+\setbeamerfont{block body}{size=\footnotesize, family=\rmfamily}%*\label{line:baitrinhbay_newthem_definition_blocks_end}*)

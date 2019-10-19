@@ -1,0 +1,91 @@
+%% trang bìa
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{titlepage}%
+\centering
+\newgeometry{top=2cm, bottom=2cm,	left=2cm, right=2cm}
+
+	{\large ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
+	\textbf{\large ĐẠI HỌC KHOA HỌC TỰ NHIÊN}\\
+	\vfill
+
+    \textbf{\large\MakeUppercase\@author}
+	 \vfill
+ 
+    \textbf{\Large\MakeUppercase\@title}
+	 \vfill
+ 
+	\textbf{\large LUẬN VĂN THẠC SĨ}
+     \vfill
+     \vfill
+     
+     \textbf{Hà Nội - 2015}
+  \end{titlepage}%
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+}
+\makeatother
+
+
+
+
+
+%% trang bia phụ
+\makeatletter
+
+\newcommand*{\thayhuongdan}[1]{\gdef\@thayhuongdan{#1}}
+\newcommand*{\@thayhuongdan}{\texttt{\string\thayhuongdan} tên thầy hướng dẫn ?}
+
+\newcommand*{\nganh}[1]{\gdef\@nganh{#1}}
+\newcommand*{\@nganh}{\texttt{\string\nganh} Ngành học?}
+
+\newcommand*{\chuyennganh}[1]{\gdef\@chuyennganh{#1}}
+\newcommand*{\@chuyennganh}{\texttt{\string\chuyennganh} Chuyên ngành học ?}
+
+\newcommand*{\maso}[1]{\gdef\@maso{#1}}
+\newcommand*{\@maso}{\texttt{\string\maso} Mã số ngành học ?}
+
+\newcommand{\maketitleTrangphu}{
+\begin{titlepage}%
+\centering
+	{\large ĐẠI HỌC QUỐC GIA HÀ NỘI}\\
+	\textbf{\large ĐẠI HỌC KHOA HỌC TỰ NHIÊN}\\
+	\vfill
+
+    \textbf{\large\MakeUppercase\@author}
+    
+	\vfill
+ 
+    \textbf{\Large\MakeUppercase\@title}
+
+	  \vspace{40pt}
+   	
+	 \begin{tabular}{ll}
+      Ngành:            &\@nganh\\
+     Chuyên ngành:&\@chuyennganh\\
+     Mã số:            &\@maso\\
+     \end{tabular}
+     
+   	\vspace{14pt}
+   	
+   	\textbf{\large LUẬN VĂN THẠC SĨ}
+   	
+  	\vspace{14pt} 
+  	       
+   	\textbf{\large NGƯỜI HƯỚNG DẪN: \@thayhuongdan}
+
+  	 \vfill
+   	 \vfill
+     	
+     \textbf{Hà Nội - 2015}
+  \end{titlepage}%
+\newpage
+\thispagestyle{empty}
+\mbox{}
+}
+\makeatother
+
+
+

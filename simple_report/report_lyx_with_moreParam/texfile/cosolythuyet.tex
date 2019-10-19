@@ -1,0 +1,44 @@
+\chapter{Tương tác của photon với vật chất}
+\label{ch:cosolythuyet}
+
+\section{Hiệu ứng quang điện}
+
+Ở năng lượng thấp ($<$ 200 keV), tương tác giữa photon với một tinh thể Germanium được thực hiện thông qua hiệu ứng quang điện. Trong trường hợp này năng lượng của photon được hấp thụ hoàn toàn bởi tinh thể Germanium. Xác suất tương tác được tính một cách gần đúng theo công thức \cite{bib_Knoll}:
+
+\begin{equation} 
+P_{ph}\approxeq k\cfrac{Z^{n}}{(h\nu)^{3.5}}
+\label{equ:huquangdien}
+\end{equation}
+
+Trong đó giá trị của $n$ thay đổi từ 4 đến 5 tương ứng với khoảng năng lượng của photon từ 0 đến 3 MeV, $h\nu$ và $Z$ lần lượt là năng lượng của photon và số hiệu nguyên tử của Germanium.
+
+\section{Hiệu ứng Compton}
+
+Công thức \ref{equ:huquangdien} được áp dụng cho các photon có năng lượng thấp, tuy nhiên khi photon có năng lượng lớn hơn ($\approx$ 200 keV đến 8 MeV), hiệu ứng Compton sẽ chiếm ưu thế. Trong quá trình này một photon có năng lượng $h\nu_{0}$ sẽ thực hiện tương tác không đàn hồi với một điện tử\footnote{Cần phân biệt giữa tán xạ Compton với tán xạ Rayleigh trong đó các tia $\gamma$, sau khi tương tác với một điện tử, thay đổi hướng chuyển động và không mất đi năng lượng.}. Một phần năng lượng của photon bị mất do tương tác với điện tử và các tia $\gamma$ sau đó sẽ tán xạ dưới một góc $\theta$ so với hướng ban đầu với năng lượng $h\nu$. Theo định luật bảo toàn năng lượng và động lượng ta có: 
+%
+\begin{equation}
+h\nu=\cfrac{m_{0}c^{2}\alpha}{1+\alpha(1-\cos{\theta})}
+\end{equation}
+
+Trong đó $\alpha=\cfrac{h\nu_{0}}{m_{0}c^{2}}$, $m_{0}$ là khối lượng của điện tử. Động năng của điện tử $(T=h\nu_{0}-h\nu)$ đạt cực đại nếu $\theta=\pi$. Tiết diện phản ứng vi phân tính trên một điện tử $\sigma_{e}$ với một góc khối $\Omega$ được thể hiện bằng công thức Klein-Nishina\cite{bib_Klein}
+
+\begin{equation}
+\cfrac{d \sigma_{e}}{d \Omega} = \cfrac{r_{0}^{2}}{2} 
+\biggl\{
+\cfrac{1}{[1+\alpha(1-cos\theta)]^{2}}
+\biggl [
+1+cos^{2}\theta+\cfrac{\alpha^{2}(1-cos\theta)^{2}}{[1+\alpha(1-cos\theta)]}
+\biggr ]
+\biggr\}
+\end{equation}
+
+trong đó $r_{0}$ bán kính của điện tử. 
+
+Các giá trị tiết diện phản ứng vi phân đối với các photon có năng lượng từ 0.2 MeV đến 2 MeV (khoảng giá trị đặc trưng được sử dụng khi nghiên cứu phổ các tia bức xạ $\gamma$) được thể hiện trên Hình \ref{fig:klein}. Các giá trị đã được chuẩn hóa theo giá trị tiết diện phản ứng cực đại được tính theo hướng của photon. Ở mức năng lượng cao ($\geq$ 1 MeV) hầu hết các tia bức xạ $\gamma$ tán xạ ở một góc rất nhỏ. Tuy nhiên, ở năng lượng thấp, các tia $\gamma$ có thể tán xạ ở các góc lớn hơn. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.8\textwidth]{figure/fig_cosolythuyet/klein.pdf}
+\caption{Tán xạ Compton của các tia bức xạ $\gamma$ theo công thức Klein-Nishina cho khoảng năng lượng từ 200 KeV đến 2 MeV.}
+\label{fig:klein}
+\end{figure}

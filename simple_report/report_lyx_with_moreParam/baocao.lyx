@@ -1,0 +1,589 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass extreport
+\begin_preamble
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học} 
+\usepackage{indentfirst}
+\end_preamble
+\options twoside, openright
+\use_default_options true
+\maintain_unincluded_children false
+\language vietnamese
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 14
+\spacing other 1.3
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD
+\end_layout
+
+\begin_layout Author
+Đoàn Quang Tuyền
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{0}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+nomname}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listfigurename}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+listtablename}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+Mở đầu
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Mở đầu}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nội dung của phần Mở đầu 
+\end_layout
+
+\begin_layout Standard
+Chương
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:cosolythuyet"
+
+\end_inset
+
+ và Phụ lục 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "phuluc:phogamma"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Tương tác của Photon với vật chất
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:cosolythuyet"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Hiệu ứng quang điện
+\end_layout
+
+\begin_layout Standard
+Trình bày hiệu ứng quang điện
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bib_Klein"
+
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\nu$"
+description "Tần số sóng điện từ"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{multline}
+x=\left\{ \begin{array}{cc}
+\Upsilon & \Omega\\
+\varpi & \varUpsilon
+\end{array}\right.
+\end{multline}
+
+\end_inset
+
+fdgdfgfdgdfg dfg
+\end_layout
+
+\begin_layout Section
+Hiệu ứng Compton
+\end_layout
+
+\begin_layout Standard
+Trình bày hiệu ứng Compton
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bib_Knoll"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Phương pháp thực nghiệm
+\end_layout
+
+\begin_layout Section
+Một số loại detector
+\end_layout
+
+\begin_layout Standard
+Trình bày một số loại detector
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bib_Simpson,bib_Bazzaco"
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:tietdien"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figure/fig_cosolythuyet/klein.pdf
+	lyxscale 30
+	width 40text%
+	rotateAngle 90
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tiết diện tán xạ.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:tietdien"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Kết quả phân tích
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:ketquaphantich"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Các phương pháp phân tích số liệu
+\end_layout
+
+\begin_layout Standard
+Công thức về tiết diện tán xạ neutron
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bib_Simpson"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\cfrac{d\sigma_{e}}{d\Omega}=\cfrac{r_{0}^{2}}{2}\biggl\{\cfrac{1}{[1+\alpha(1-cos\theta)]^{2}}\biggl[1+cos^{2}\theta+\cfrac{\alpha^{2}(1-cos\theta)^{2}}{[1+\alpha(1-cos\theta)]}\biggr]\biggr\}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Các kết quả chính
+\end_layout
+
+\begin_layout Standard
+Trình bày các kết quả chính
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figure/fig_ketquaphantich/156Gd.png
+	lyxscale 20
+	width 40text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cấu trúc hạt nhân 156Gd.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cautruc156GD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hình vẽ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cautruc156GD"
+
+\end_inset
+
+ trình bày cấu trúc hạt nhân 156Gd.
+\end_layout
+
+\begin_layout Chapter*
+Kết luận
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Kết luận}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trình bày kết luận
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibtex/biblio"
+options "IEEEtran"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{
+\backslash
+bibname}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\start_of_appendix
+Phổ gamma từ các detector khác nhau
+\begin_inset CommandInset label
+LatexCommand label
+name "phuluc:phogamma"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Các phổ gamma từ detector Eurobal
+\end_layout
+
+\begin_layout Standard
+Trình bày các nội dung
+\end_layout
+
+\begin_layout Section
+Các phổ gamma từ detector Jurogam
+\end_layout
+
+\begin_layout Standard
+Trình bày nội dung
+\end_layout
+
+\begin_layout Chapter
+Các số liệu thực nghiệm
+\end_layout
+
+\begin_layout Section
+Các số liệu thực nghiệm từ detector Eurobal
+\end_layout
+
+\begin_layout Standard
+Trình bày các nội dung
+\end_layout
+
+\begin_layout Section
+Các số liệu thực nghiệm từ detector Jurogam
+\end_layout
+
+\begin_layout Standard
+Trình bày nội dung
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,84 @@
+\documentclass[a4paper, 12pt, twoside, openright]{report}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+
+\usepackage[bottom = 2.5cm, top = 2.5cm, left= 2.5cm, right = 2cm]{geometry}
+
+\usepackage{amsmath,amssymb, mathtools}
+\usepackage{graphicx}
+
+%\usepackage[colorlinks=true, breaklinks=true]{hyperref}
+%cho bản in
+\usepackage{xcolor} % sử dụng khai báo màu
+\usepackage[linkbordercolor=white,citebordercolor=white,urlbordercolor=white ,breaklinks, pdfencoding=unicode, hyperindex]{hyperref}
+
+
+\usepackage[intoc]{nomencl}
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}
+\makenomenclature
+
+\usepackage{indentfirst}% tạo indent ở đoạn đầu tiên 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{definition/definition.tex}
+
+%\usepackage[%
+%backend=biber,%biber main_withBorder
+%%backend=bibtex,%bibtex main_withBorder
+%    sorting=none,
+%    style=numeric]{biblatex} % load the package
+%\addbibresource{bibtex/biblio.bib} 
+
+
+\input{definition/definition_border.tex} % use to make a border arround page and text area - Option
+
+
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}
+\author{Đoàn Quang Tuyền}
+\thayhuongdan{TS. Nguyễn Văn A}
+\nganh{Vật lý}
+\chuyennganh{Vật lý hạt nhân}
+\maso{103.104.105}
+
+
+\begin{document}
+
+
+
+\maketitle
+\maketitleTrangphu
+
+\cleardoublepage
+\setcounter{page}{1} 
+\pagenumbering{roman}
+\tableofcontents
+
+ 
+\cleardoublepage% or \clearpage
+\markboth{\nomname}{\nomname}% maybe with \MakeUppercase
+\printnomenclature
+
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+
+\cleardoublepage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+	\include{texfile/modau}
+	\include{texfile/cosolythuyet_withBorder}
+	\include{texfile/phuongphapthucnghiem}
+	\include{texfile/ketquaphantich}	
+	\include{texfile/ketluan}
+	
+\bibliographystyle{ieeetr}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliography{bibtex/biblio, bibtex/biblio_} %put path to the Bib from where the BibtexRun.bat is located 
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[a4paper, 14pt, twoside, openright]{extreport}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+
+\usepackage[bottom = 2.5cm, top = 2.5cm, left= 3cm, right = 2cm]{geometry}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+
+%\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+%cho bản in
+\usepackage{xcolor} % sử dụng khai báo màu
+\usepackage[linkbordercolor=white,citebordercolor=white,urlbordercolor=white ,breaklinks, pdfencoding=unicode, hyperindex]{hyperref}
+\input{definition/definition_border.tex} % use to make a border arround page and text area - Option
+
+\usepackage[intoc]{nomencl}
+
+\usepackage{indentfirst}% tạo indent ở đoạn đầu tiên 
+
+\input{definition/definition.tex}
+
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}
+\author{Đoàn Quang Tuyền}
+
+\begin{document}
+
+\pagestyle{empty} 
+\maketitle  
+  
+\cleardoublepage
+\pagestyle{plain} 
+\setcounter{page}{1}
+\tableofcontents
+
+\makenomenclature	
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}    
+\printnomenclature
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\listfigurename}{Danh mục các hình vẽ}
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\listtablename}{Danh mục các bảng biểu}
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+	\input{texfile/modau}
+	\input{texfile/cosolythuyet_withBorder}
+	\input{texfile/phuongphapthucnghiem}
+	\input{texfile/ketquaphantich}	
+	\input{texfile/ketluan}
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\bibname}{Tài liệu tham khảo}
+\addcontentsline{toc}{chapter}{\bibname}
+\bibliographystyle{ieeetr}
+\bibliography{bibtex/biblio} %put path to the Bib from where the BibtexRun.bat is located 
+
+\cleardoublepage
+\phantomsection
+\renewcommand{\appendixname}{Phụ lục}
+\addcontentsline{toc}{chapter}{\appendixname}
+\renewcommand{\chaptername}{\appendixname}
+\appendix
+
+\input{texfile/phuluc_cacdothi}
+\input{texfile/phuluc_cacsolieu}
+
+\end{document}

@@ -1,0 +1,139 @@
+% các thông số của văn bản
+\renewcommand{\baselinestretch}{1.3}
+\setlength{\parindent}{1.27 cm}
+\setlength{\parskip}{6pt}
+
+% xoá các heading trên các trang trắng
+\newcommand{\clearHeading}{
+	\clearpage
+	\pagestyle{empty}
+	\cleardoublepage
+	\pagestyle{fancyplain}
+}
+
+% định dạng trang
+\pagestyle{fancyplain} 
+\renewcommand{\chaptermark}[1]{%
+ \markboth{\sl \chaptername~\thechapter.~#1}{}}
+\renewcommand{\sectionmark}[1]{%
+ \markright{\sl \thesection.~#1}}
+  
+  \fancyhf{}
+  \lhead[\fancyplain{}{\leftmark}]{}
+  \rhead[]{\fancyplain{}{\rightmark}}
+  \lfoot[\thepage]{}
+  \rfoot[]{\thepage}
+
+%% các định nghĩa sử dụng trong trang bìa
+\makeatletter
+\newcommand*{\@nganh}{Ngành?}
+\newcommand*{\nganh}[1]{\gdef\@nganh{#1}}
+
+\newcommand*{\@chuyennganh}{Chuyên ngành?}
+\newcommand*{\chuyennganh}[1]{\gdef\@chuyennganh{#1}}
+
+\newcommand*{\@maso}{Chương trình gì?}
+\newcommand*{\maso}[1]{\gdef\@maso{#1}}
+
+\newcommand*{\@nam}{Năm ?}
+\newcommand*{\nam}[1]{\gdef\@nam{#1}}
+
+\newcommand*{\@thayhuongdan}{Tên thầy hướng dẫn?}
+\newcommand*{\thayhuongdan}[1]{\gdef\@thayhuongdan{#1}}
+
+
+% trang bìa
+\renewcommand{\maketitle}{
+\begin{titlepage}%
+
+\newgeometry{top=2cm,bottom=2cm,left=2cm,right=2cm}	
+	
+\AddToShipoutPicture*{%	
+\AtTextCenter{%
+ \makebox(0,0)[c]{
+ \begin{tikzpicture}
+ \draw[line width = 4pt](0,0)rectangle(\textwidth+2*0.3cm,\textheight+2*0.3cm);
+ \end{tikzpicture}
+ }
+}
+}
+
+\begin{center}
+		
+ {\fontsize{13}{15.6}\selectfont 
+ ĐẠI HỌC QUỐC GIA HÀ NỘI\\
+\textbf{ TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}\\
+	\rule{3cm}{1.pt}} 
+
+	\vfill
+	\textbf{\@author}
+	\vfill
+ 
+ 	{\fontsize{18}{21.6}\selectfont \textbf{\MakeUppercase\@title}}
+	 \vfill
+ 
+	LUẬN ÁN TIẾN SĨ: {\MakeUppercase\@nganh}
+	\vfill
+ 	
+     \textbf{Hà Nội - \@nam}
+
+ \end{center}
+\end{titlepage}%
+}
+
+
+
+%% trang bìa phụ
+\newcommand{\maketitleTrangphu}{
+\begin{titlepage}%
+
+\AddToShipoutPicture*{%	
+\AtTextCenter{%
+ \makebox(0,0)[c]{
+ \begin{tikzpicture}
+ \draw[line width = 4pt](0,0)rectangle(\textwidth+2*0.3cm,\textheight+2*0.3cm);
+ \end{tikzpicture}
+ }
+ }
+}
+	
+\begin{center}
+
+ {\fontsize{13}{15.6}\selectfont% 
+ ĐẠI HỌC QUỐC GIA HÀ NỘI\\
+ \textbf{TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}\\
+	\rule{3cm}{1.pt}} 
+
+	\vfill
+	\textbf{\@author}
+	\vfill
+ 
+ 	{\fontsize{18}{21.6}\selectfont \textbf{\MakeUppercase\@title}}
+	 \vspace{2\baselineskip}
+   	
+		\begin{tabular}{ll}%*\label{line:lvTiensi_definition_tabular}*)
+		Chuyên ngành:&\@chuyennganh\\
+		Mã số:            &\@maso\\
+		\end{tabular}%*\label{line:lvTiensi_definition_tabular_end}*)
+   
+   	\vspace{2\baselineskip}
+   	
+	LUẬN ÁN TIẾN SĨ: {\MakeUppercase\@chuyennganh}
+   	
+  	\vspace{\baselineskip}
+
+\hspace{0.3\textwidth}NGƯỜI HƯỚNG DẪN KHOA HỌC:%*\label{line:lvTiensi_definition_hspace}*)
+
+\hspace{0.4\textwidth}%*\label{line:lvTiensi_definition_hspace2}*)
+	 \begin{tabular}{l}
+	  	\@thayhuongdan
+  	  \end{tabular}  	       
+
+  	 \vfill
+     	
+     \textbf{Hà Nội - \@nam}
+
+ \end{center}
+\end{titlepage}%
+}
+\makeatother

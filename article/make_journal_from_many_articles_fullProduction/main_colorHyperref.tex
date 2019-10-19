@@ -1,0 +1,133 @@
+\documentclass[11pt, a4paper, bold, center, twoside, noheadline, journal]{paper}
+
+ % căn lề
+\usepackage[bottom = 2.5cm, top = 2.5cm, inner= 2cm, outer = 1.5cm]{geometry}
+
+% ngôn ngữ soạn thảo
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+
+% hình vẽ và công thức toán học
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+  
+% phông chữ Time New Roman
+\usepackage{times}
+\usepackage{mathptmx}
+
+\usepackage{cmap} % cho phép tìm kiếm trên tệp .pdf tạo thành
+\usepackage{perpage}% đánh số các ký hiệu footnote theo từng trang
+	\MakePerPage{footnote}
+\usepackage{indentfirst}
+
+% tạo liên kết trong tệp *.pdf 
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+%\usepackage{xcolor}
+%\usepackage[colorlinks, linkcolor = black, citecolor = black, urlcolor = black,  breaklinks, pdfencoding=unicode]{hyperref}
+
+% gói lệnh standalone để không biên dịch phần đầu của tệp nguồn tương 	 ứng với các bài báo riêng lẻ
+\usepackage{standalone}
+
+% đưa các bài báo vào trong tệp tin chính
+\usepackage{import}
+
+% thay dổi lại một số thông số 
+\setlength{\beforetitlespace}{0cm}
+
+% bỏ các tiêu đề chạy trên các trang trống
+\newcommand{\clearHeading}{
+	\clearpage
+	\thispagestyle{empty}	
+	\cleardoublepage      
+}
+
+% định dạng trang văn bản
+\usepackage{fancyhdr}%*\label{line:baibao_standalone_main_fancyhdr}*)
+
+\makeatletter
+\let\ps@plain\ps@fancy %*\label{line:baibao_standalone_main_plainfancy}*)
+\makeatother
+
+\fancyhf{}%*\label{line:baibao_standalone_main_fancyhf}*)
+\fancyhead[C]{\fancyplain{}{Tạp chí Khoa học và Công nghệ hạt nhân, Vol. 5, No.4 (2016).}}%*\label{line:baibao_standalone_main_fancyhead}*)
+\fancyfoot[C]{\copyright 2016 Hội Năng lượng nguyên tử Việt Nam và Viện Năng lượng nguyên tử}%*\label{line:baibao_standalone_main_fancyfoot}*)
+\renewcommand{\headrulewidth}{0pt}
+
+% soạn thảo văn bản nhiều cột (2 cột) và đưa hình vẽ, bảng số vào trong văn bản
+\usepackage{multicol}%*\label{line:baibao_standalone_main_multicol}*)
+\usepackage{float}%*\label{line:baibao_standalone_main_float}*)
+
+% định nghĩa thông số liên quan tới số trang bắt đầu và kết thúc của một bài báo
+\usepackage{refcount}%*\label{line:baibao_standalone_main_refcount}*)
+\newcounter{ppBegin}%*\label{line:baibao_standalone_main_ppBegin}*)
+\newcounter{ppEnd}%*\label{line:baibao_standalone_main_ppEnd}*)
+
+% định nghĩa lệnh dùng để gọi các bài báo vào trong tệp tin chính main.tex
+\newcommand{\inputArticle}[3]{%*\label{line:baibao_standalone_main_inputArticle}*)
+	\def\submit{(Nhận ngày: #2, Đăng ngày: #3)}%*\label{line:baibao_standalone_main_submit}*)
+
+	\setcounter{ppBegin}{\thepage}%*\label{line:baibao_standalone_main_ppBegin_use}*)
+	\setcounter{ppEnd}{\getpagerefnumber{#1}}%*\label{line:baibao_standalone_main_ppEnd_use}*)
+
+	\subimport{input/#1/}{#1.tex}
+
+	\begin{center}%*\label{line:baibao_standalone_main_inputArticle_center}*)
+	\rule{0.4\textwidth}{1pt}\\%*\label{line:baibao_standalone_main_inputArticle_rule}*)
+	\vskip 10pt
+	{\bfseries\Large Tài liệu tham khảo}
+	\end{center}%*\label{line:baibao_standalone_main_inputArticle_center_end}*)
+
+	\begin{multicols}{2} 
+		\begingroup
+		\renewcommand{\section}[2]{}%*\label{line:baibao_standalone_main_inputArticle_renewcommand}*)
+		\subimport{input/#1/}{#1.bbl} 
+		\vfill%*\label{line:baibao_standalone_main_inputArticle_vfill}*)
+		\null%*\label{line:baibao_standalone_main_inputArticle_null}*)
+		\endgroup
+	\end{multicols}
+
+	\label{#1}%*\label{line:baibao_standalone_main_inputArticle_label}*)
+	\clearHeading
+}%*\label{line:baibao_standalone_main_inputArticle_end}*)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\renewcommand{\contentsname}{Danh sách các bài báo}
+\renewcommand{\abstractname}{Tóm tắt}
+\renewcommand{\keywordname}{\textbf{Từ khóa}}
+\renewcommand{\figureshortname}{Hình}
+\renewcommand{\tableshortname}{Bảng}
+\renewcommand{\refname}{Tài liệu tham khảo}
+
+% trang bìa của tạp chí
+\begin{titlepage} 
+\newgeometry{top=2cm, bottom=2cm, left=2cm, right=2cm}	
+	\begin{center}
+		\bfseries
+		{\Large Viện Năng lượng nguyên tử\\
+		\rule{0.6\textwidth}{1.pt}} 
+		\vfill
+		{\Huge Tạp chí Khoa học và Công nghệ hạt nhân} 
+		\vfill
+		{\large Vol. 5, No.4 (2016)}
+	\end{center} 
+\clearHeading
+\end{titlepage}
+
+ % Mục lục
+\thispagestyle{plain}
+\journalcontents
+\clearHeading
+
+% thay đổi hình thức hiển thị tại trang đầu tiên của một bài báo (thêm số trang của bài báo)
+\fancyhead[C]{\fancyplain{}{Tạp chí Khoa học và Công nghệ hạt nhân, Vol. 5, No.4 (2016). pp.\theppBegin-\theppEnd.}}%*\label{line:baibao_standalone_main_fancyhead_modif}*)
+
+% đưa các bài báo vào tệp nguồn
+	\inputArticle{dqtuyen}{16/05/2015}{20/11/2016}%*\label{line:baibao_standalone_main_inputArticle_use}*)
+	\inputArticle{ttvien}{16/05/2015}{20/11/2016}%*\label{line:baibao_standalone_main_inputArticle_use_end}*)
+
+\end{document}

@@ -1,0 +1,1 @@
+for %%f in (*.tex) do (pdflatex %%f && bibtex %%~nf.aux && pdflatex %%f && pdflatex %%f)

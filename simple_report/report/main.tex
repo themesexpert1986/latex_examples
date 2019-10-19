@@ -1,0 +1,73 @@
+\documentclass[a4paper, 12pt, twoside, openright]{report}%*\label{line:simglereport_documentclass}*)
+
+\usepackage[utf8]{inputenc} %*\label{line:simglereport_inputenc}*)
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}%*\label{line:simglereport_babel}*)
+
+\usepackage[bottom=2.5cm, top=2.5cm, inner=3cm, outer=2cm]{geometry}%*\label{line:simglereport_geometry}*)
+
+\usepackage{amssymb, amsthm}%*\label{line:simglereport_amsthm}*)
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}%*\label{line:simglereport_graphicx}*)
+
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}%*\label{line:simglereport_hyperref}*)
+
+\usepackage[intoc]{nomencl}%*\label{line:simglereport_nomencl}*)
+
+\usepackage{indentfirst}%*\label{line:simglereport_indentfirst}*)
+
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}%*\label{line:simglereport_title}*)
+\author{Đoàn Quang Tuyền\thanks{Viện Vật lý Hạt nhân \newline Tel: 0912345678 \newline Email: abcd@gmail.com}}%*\label{line:simglereport_author}*)
+\date{\today}%*\label{line:simglereport_date}*)
+
+
+
+% bắt đầu phần nội dung của báo cáo
+\begin{document}%*\label{line:simglereport_begin}*)
+\pagestyle{empty}%*\label{line:simglereport_empty}*)
+\maketitle%*\label{line:simglereport_maketitle}*)
+\cleardoublepage%*\label{line:simglereport_cleardoublepage}*)
+\pagestyle{plain} %*\label{line:simglereport_plain}*)
+\setcounter{page}{1}%*\label{line:simglereport_page}*)
+\tableofcontents%*\label{line:simglereport_tableofcontents}*)
+
+\makenomenclature%*\label{line:simglereport_makenomenclature}*)	    
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}
+\printnomenclature%*\label{line:simglereport_printnomenclature}*)
+
+\cleardoublepage%*\label{line:simglereport_cleardoublepage_lof}*)
+\phantomsection
+\renewcommand{\listfigurename}{Danh mục các hình vẽ}%*\label{line:simglereport_listoffigures_renew}*)
+\addcontentsline{toc}{chapter}{\listfigurename}%*\label{line:simglereport_listoffigures_addtoc}*)
+\listoffigures%*\label{line:simglereport_listoffigures}*)
+
+\cleardoublepage%*\label{line:simglereport_cleardoublepage_lot}*)
+\phantomsection
+\renewcommand{\listtablename}{Danh mục các bảng biểu}%*\label{line:simglereport_listoftables__renew}*)
+\addcontentsline{toc}{chapter}{\listtablename}%*\label{line:simglereport_listoftables_addtoc}*)
+\listoftables%*\label{line:simglereport_listoftables}*)
+
+	\input{texfile/modau}%*\label{line:simglereport_modau}*)
+	\input{texfile/cosolythuyet}
+	\input{texfile/phuongphapthucnghiem}
+	\input{texfile/ketquaphantich}	
+	\input{texfile/ketluan}%*\label{line:simglereport_ketluan}*)
+
+\cleardoublepage%*\label{line:simglereport_cleardoublepage_bib}*)
+\phantomsection
+\renewcommand{\bibname}{Tài liệu tham khảo}%*\label{line:simglereport_renew}*)
+\addcontentsline{toc}{chapter}{\bibname}%*\label{line:simglereport_bibname}*)
+\bibliographystyle{ieeetr}%*\label{line:simglereport_ieeetr}*) 
+\bibliography{bibtex/biblio}%*\label{line:simglereport_biblio}*) 
+
+\cleardoublepage%*\label{line:simglereport_cleardoublepage_app}*)
+\phantomsection
+\renewcommand{\appendixname}{Phụ lục}%*\label{line:simglereport_appendix_renew}*)
+\addcontentsline{toc}{chapter}{\appendixname}%*\label{line:simglereport_appendix_addcontentsline}*)
+\renewcommand{\chaptername}{\appendixname}
+
+\appendix %*\label{line:simglereport_appendix}*) 
+	\input{texfile/phuluc_cacdothi}
+	\input{texfile/phuluc_cacsolieu} %*\label{line:simglereport_phuluc}*) 
+
+\end{document}

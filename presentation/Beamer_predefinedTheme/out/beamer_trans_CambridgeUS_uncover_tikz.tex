@@ -1,0 +1,54 @@
+\documentclass[11pt, hyperref={unicode}]{beamer}
+
+\usetheme{CambridgeUS}
+
+\usepackage[T1, T2A,T2B,T2C,T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, french, russian, main = vietnamese]{babel}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{trees, backgrounds, arrows, shapes, calc}
+
+\includeonlyframes{nguyentu}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Các nội dung chính}
+	\tableofcontents
+\end{frame}
+
+\section{Tổng Quan}
+
+\begin{frame}[label = nguyentu]{Cấu tạo nguyên tử}
+
+Cấu tạo nguyên tử:
+\begin{tikzpicture}
+
+	\node[draw](A) at (0,0){Atom};
+	\node[draw](B) at (15:4){Nucleus};
+	\node[draw](C) at (-15:5){electron};
+	
+	\draw[->](A)|-(B);
+	\draw[->](A)-|(C);
+	
+	\uncover<2->{\draw[->](A)edge[bend left](B);}
+	\uncover<2->{\draw[->](A)edge[bend right](C);}
+	\uncover<3->{\draw[->](B)edge[out=270, in=180](C);}
+	
+\end{tikzpicture}
+
+\end{frame}
+
+...
+...
+
+\end{document}

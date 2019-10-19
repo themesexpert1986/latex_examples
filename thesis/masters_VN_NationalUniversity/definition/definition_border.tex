@@ -1,0 +1,21 @@
+% use to make a border arround page and text area
+\usepackage{tikz}%ve hinh
+\usetikzlibrary{calc}
+\usepackage{eso-pic} 
+
+\AddToShipoutPicture{%
+		\AtTextCenter{%
+		\makebox(0,0)[c]{
+		\begin{tikzpicture}
+		\draw[color = green!30](0,0)rectangle(\textwidth,\textheight);
+		\end{tikzpicture}
+			}
+		}
+      
+		\AtPageLowerLeft{% khung bao quanh trang văn bản
+		\begin{tikzpicture}
+  		\draw[color = red,line width = 1.5pt](0,0) rectangle (\paperwidth-1.4pt,\paperheight-1.4pt);
+		\end{tikzpicture}
+		}
+ }
+ 

@@ -1,0 +1,105 @@
+\documentclass[11pt, hyperref={unicode}]{beamer}
+
+\usepackage[T1, T2A,T2B,T2C,T5]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, french, russian, main = vietnamese]{babel}
+
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{trees, backgrounds, arrows, shapes, shadows, calc}
+
+\usepackage[timeinterval = 1]{tdclock}
+
+\input{definition/definition.tex}
+
+%\includeonlyframes{ghinhan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Cấu trúc hạt nhân 156Gd]{Ứng dụng phổ $\gamma$ trong nghiên cứu cấu trúc hạt nhân 156Gd}
+\author[D.Q. Tuyền]{Đoàn Quang Tuyền}
+\institute[IPNL]{Viện nghiên cứu hạt nhân Lyon, Pháp \\  4 Rue Enrico Fermi, 69622 Villeurbanne, France}
+\date[Zakopane, 2008]{Zakopane, Ba lan, 1-7/09/2008} 
+
+\begin{document}
+
+
+\logo{\includegraphics[height=0.14\paperheight]{Logo/Logo-ipnl.jpg}}
+
+\begin{frame}
+	\logo{}
+	\insertlogo{
+	\includegraphics[height=0.14\paperheight]{Logo/tetanuclogo}
+	\hfill
+	\includegraphics[height=0.14\paperheight]{Logo/Agalogo}
+}
+\titlepage
+\initclock
+\end{frame}
+
+\logo{}
+
+\begin{frame}{Các nội dung chính}
+\tableofcontents
+\end{frame}
+
+\section{Tổng Quan}
+
+\subsection{Các phổ $\gamma$}
+
+\begin{frame}[label = ghinhan]{Ghi nhận $\gamma$}
+
+Các thông số chính của detector:
+
+\begin{itemize}
+
+\item<2-> Hiệu suất ghi nhận: $\varepsilon_{p} = \dfrac{N_\text{(ghi nhận)}}{N_\text{(phát ra)}}$
+
+\item<3-> Tỷ số P/T: $P/T = \dfrac{N_\text{(ghi nhận)}(E_{\gamma} = 1000 keV)}{N_\text{(ghi nhận)}}$
+
+\item<4-> Độ phân giải $\Delta E$
+
+\end{itemize}
+
+\uncover<5->{Độ phân giải của phổ $\gamma$ phụ thuộc vào năng lượng của tia tới và góc tán xạ (góc mở của detector).}
+
+\end{frame}
+
+
+
+
+
+
+\subsection{Cấu trúc hạt nhân 156Gd}
+
+
+%%%%%%%%%%%%%
+\section{Các phương pháp thực nghiệm}
+\subsection{Các loại detector}
+\begin{frame}{Dữ liệu đầu vào}
+\end{frame}
+
+
+\subsection{Xử lý số liệu}
+
+%%%%%%%%%%%%%%%
+\section{Các kết quả chính}
+\begin{frame}{Số liệu tiết diện}
+\end{frame}
+
+\subsection{Các chuyển dịch}
+\begin{frame}{Sai số}
+\begin{block}{Chào}
+Thông tin về phương trình
+\end{block}
+\end{frame}
+
+%%%%%%%%%%%%
+\section{Kết luận}
+\begin{frame}{Kết luận}
+\end{frame}
+
+\end{document}

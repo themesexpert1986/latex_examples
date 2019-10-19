@@ -1,0 +1,116 @@
+\documentclass[a4paper,14pt, twoside, openright]{extreport}%*\label{line:lvtotnghiep_main_documentclass}*)
+
+\usepackage{times}%*\label{line:lvtotnghiep_main_times}*)
+\usepackage{mathptmx}%*\label{line:lvtotnghiep_main_mathptmx}*)
+
+\usepackage[utf8]{inputenc} %*\label{line:lvtotnghiep_main_inputenc}*)
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}%*\label{line:lvtotnghiep_main_babel}*)
+ 
+\usepackage[bottom=2.5cm, top=2.5cm, inner=3.5cm, outer=2cm]{geometry}%*\label{line:lvtotnghiep_main_geometry}*)
+
+\usepackage{amssymb, amsthm}%*\label{line:lvtotnghiep_main_amsthm}*)
+\usepackage[intlimits]{mathtools}%*\label{line:lvtotnghiep_main_mathtools}*)
+\usepackage{graphicx}%*\label{line:lvtotnghiep_main_graphicx}*)
+
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}%*\label{line:lvtotnghiep_main_hyperref}*)
+
+\usepackage{nomencl}%*\label{line:lvtotnghiep_main_nomencl}*)
+
+\usepackage{indentfirst}%*\label{line:lvtotnghiep_main_indentfirst}*)
+
+\usepackage{fancyhdr}%*\label{line:lvtotnghiep_main_fancyhdr}*)
+
+\usepackage[defernumbers, backend=biber, style=numeric, citestyle = numeric-comp, sorting = nty]{biblatex}%*\label{line:lvtotnghiep_main_biblatex}*) 
+	\addbibresource{bibtex/biblio_vn.bib} %*\label{line:lvtotnghiep_main_biblatex_vn}*) 
+	\addbibresource{bibtex/biblio_en.bib}%*\label{line:lvtotnghiep_main_biblatex_en}*) 
+
+\usepackage{tikz} %*\label{line:lvtotnghiep_main_tikz}*) 
+\usepackage{calc}%*\label{line:lvtotnghiep_main_calc}*) 
+\usepackage{eso-pic} %*\label{line:lvtotnghiep_main_esopic}*) 
+
+\usepackage[toc]{appendix} %*\label{line:lvtotnghiep_main_appendix}*) 
+	\input{definition/definition.tex}%*\label{line:lvtotnghiep_main_definition}*) 
+\title{Ứng dụng các phổ Gamma trong nghiên cứu cấu trúc hạt nhân 156GD}%*\label{line:lvtotnghiep_main_title}*) 
+\author{Đoàn Quang Tuyền}
+\khoa{Vật lý}
+\nganh{Vật lý hạt nhân}
+\chuongtrinhdaotao{Chuẩn}
+\nam{2015}
+\thayhuongdan{TS. Nguyễn Văn A}%*\label{line:lvtotnghiep_main_thayhuongdan}*)
+
+
+% bắt đầu phần nội dung của luận văn
+\begin{document}    
+
+\pagestyle{empty}%*\label{line:lvtotnghiep_main_empty}*)
+\lfoot[]{}%*\label{line:lvtotnghiep_main_lfoot}*)
+\rfoot[]{}%*\label{line:lvtotnghiep_main_rfoot}*)
+
+\maketitle%*\label{line:lvtotnghiep_main_maketitle}*)
+
+\cleardoublepage
+\maketitleTrangphu%*\label{line:lvtotnghiep_main_maketitleTrangphu}*)
+
+
+	\input{texfile/loicamon}%*\label{line:lvtotnghiep_main_loicamon}*)
+
+
+\makenomenclature%*\label{line:lvtotnghiep_main_makenomenclature}*)
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}%*\xdyIndex{nomname@\spverb\nomname}*)
+\printnomenclature %*\label{line:lvtotnghiep_main_printnomenclature}*)
+
+
+\tableofcontents%*\label{line:lvtotnghiep_main_tableofcontents}*)
+
+ \clearHeading%*\label{line:lvtotnghiep_main_clearHeading}*)
+ \lfoot[\thepage]{}%*\label{line:lvtotnghiep_main_lfoot_pg}*)
+ \rfoot[]{\thepage}%*\label{line:lvtotnghiep_main_rfoot_pg}*)
+ \setcounter{page}{1}%*\label{line:lvtotnghiep_main_setcounter}*)
+
+
+	\input{texfile/modau}%*\label{line:lvtotnghiep_main_modau}*)
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_md}*)
+	
+	\input{texfile/tongquan}
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_tq}*)
+	
+	\input{texfile/doituongnghiencuu}
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_nc}*)
+	
+	\input{texfile/ketquavathaoluan}	
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_kq}*)
+	\input{texfile/ketluan}
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_kl}*)
+
+
+\defbibheading{tiengViet}{%*\label{line:lvtotnghiep_main_defbibheading_vn}*) 
+	\section*{Tài liệu tiếng Việt}%*\label{line:lvtotnghiep_main_defbibheading_vn_sec}*)
+	\markboth{\sl Tài liệu tham khảo}{\sl Tài liệu tiếng Việt}%*\label{line:lvtotnghiep_main_defbibheading_vn_mb}\xdyIndex{markboth@\spverb\markboth}*)
+	\addcontentsline{toc}{section}{Tài liệu tiếng Việt}
+}
+
+\defbibheading{tiengAnh}{%*\label{line:lvtotnghiep_main_defbibheading_en}*)
+	\section*{Tài liệu tiếng Anh}%*\label{line:lvtotnghiep_main_defbibheading_en_sec}*)
+	\markboth{\sl Tài liệu tham khảo}{\sl Tài liệu tiếng Anh}%*\label{line:lvtotnghiep_main_defbibheading_en_mb}*)
+	\addcontentsline{toc}{section}{Tài liệu tiếng Anh}
+}%*\label{line:lvtotnghiep_main_defbibheading_en_end}*)
+
+\printbibheading[heading=bibintoc, title = {Tài liệu tham khảo}] %*\label{line:lvtotnghiep_main_printbibheading}*) 
+\printbibliography[heading=tiengViet, keyword=VN]%*\label{line:lvtotnghiep_main_printbibheading_vn}*)
+\printbibliography[heading=tiengAnh, keyword=EN]%*\label{line:lvtotnghiep_main_printbibheading_en}*) 
+\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_bib}*)
+
+
+\renewcommand{\appendixtocname}{Phụ lục}%*\label{line:lvtotnghiep_main_appendix_tocname}*) 
+\addappheadtotoc%*\label{line:lvtotnghiep_main_appendix_totoc}*) 
+\renewcommand{\chaptername}{\appendixname}
+
+\appendix%*\label{line:lvtotnghiep_main_appendix_use}*) 
+	\input{texfile/phuluc_cacdothi}
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_pla}*)
+	\input{texfile/phuluc_cacsolieu}
+	\clearHeading%*\label{line:lvtotnghiep_main_clearHeading_plb}*)
+ 
+ 
+\end{document}

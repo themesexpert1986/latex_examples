@@ -1,0 +1,349 @@
+#LyX file created by tex2lyx 2.1
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass report
+\options openright
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding T5
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks 0
+\pdf_bookmarksnumbered 0
+\pdf_bookmarksopen 0
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks 1
+\pdf_pdfborder 0
+\pdf_colorlinks 1
+\pdf_backref section
+\pdf_pdfusetitle 0
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 2
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Tương tác của photon với vật chất
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "ch:cosolythuyet"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Hiệu ứng quang điện
+\end_layout
+
+\begin_layout Standard
+Ở năng lượng thấp (
+\begin_inset Formula $<$
+\end_inset
+
+ 200 keV), tương tác giữa photon với một tinh thể Germanium được thực hiện thông qua hiệu ứng quang điện. Trong trường hợp này năng lượng của photon được hấp thụ hoàn toàn bởi tinh thể Germanium. Xác suất tương tác được tính một cách gần đúng theo công thức 
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "bib_Knoll"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation} 
+P_{ph}\approxeq k\cfrac{Z^{n}}{(h\nu)^{3.5}}
+\label{equ:huquangdien}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trong đó giá trị của 
+\begin_inset Formula $n$
+\end_inset
+
+ thay đổi từ 4 đến 5 tương ứng với khoảng năng lượng của photon từ 0 đến 3 MeV, 
+\begin_inset Formula $h\nu$
+\end_inset
+
+ và 
+\begin_inset Formula $Z$
+\end_inset
+
+ lần lượt là năng lượng của photon và số hiệu nguyên tử của Germanium.
+\end_layout
+
+\begin_layout Section
+Hiệu ứng Compton
+\end_layout
+
+\begin_layout Standard
+Công thức 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "equ:huquangdien"
+
+\end_inset
+
+ được áp dụng cho các photon có năng lượng thấp, tuy nhiên khi photon có năng lượng lớn hơn (
+\begin_inset Formula $\approx$
+\end_inset
+
+ 200 keV đến 8 MeV), hiệu ứng Compton sẽ chiếm ưu thế. Trong quá trình này một photon có năng lượng 
+\begin_inset Formula $h\nu_{0}$
+\end_inset
+
+ sẽ thực hiện tương tác không đàn hồi với một điện tử
+\begin_inset Foot
+status collapsed
+
+
+\begin_layout Standard
+Cần phân biệt giữa tán xạ Compton với tán xạ Rayleigh trong đó các tia 
+\begin_inset Formula $\gamma$
+\end_inset
+
+, sau khi tương tác với một điện tử, thay đổi hướng chuyển động và không mất đi năng lượng.
+\end_layout
+
+\end_inset
+
+. Một phần năng lượng của photon bị mất do tương tác với điện tử và các tia 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ sau đó sẽ tán xạ dưới một góc 
+\begin_inset Formula $\theta$
+\end_inset
+
+ so với hướng ban đầu với năng lượng 
+\begin_inset Formula $h\nu$
+\end_inset
+
+. Theo định luật bảo toàn năng lượng và động lượng ta có: 
+\begin_inset Formula \begin{equation}
+h\nu=\cfrac{m_{0}c^{2}\alpha}{1+\alpha(1-\cos{\theta})}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Trong đó 
+\begin_inset Formula $\alpha=\cfrac{h\nu_{0}}{m_{0}c^{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $m_{0}$
+\end_inset
+
+ là khối lượng của điện tử. Động năng của điện tử 
+\begin_inset Formula $(T=h\nu_{0}-h\nu)$
+\end_inset
+
+ đạt cực đại nếu 
+\begin_inset Formula $\theta=\pi$
+\end_inset
+
+. Tiết diện phản ứng vi phân tính trên một điện tử 
+\begin_inset Formula $\sigma_{e}$
+\end_inset
+
+ với một góc khối 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ được thể hiện bằng công thức Klein-Nishina
+\begin_inset CommandInset citation
+LatexCommand cite
+after ""
+key "bib_Klein"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Formula \begin{equation}
+\cfrac{d \sigma_{e}}{d \Omega} = \cfrac{r_{0}^{2}}{2} 
+\biggl\{
+\cfrac{1}{[1+\alpha(1-cos\theta)]^{2}}
+\biggl [
+1+cos^{2}\theta+\cfrac{\alpha^{2}(1-cos\theta)^{2}}{[1+\alpha(1-cos\theta)]}
+\biggr ]
+\biggr\}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+trong đó 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ bán kính của điện tử.
+\end_layout
+
+\begin_layout Standard
+Các giá trị tiết diện phản ứng vi phân đối với các photon có năng lượng từ 0.2 MeV đến 2 MeV (khoảng giá trị đặc trưng được sử dụng khi nghiên cứu phổ các tia bức xạ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+) được thể hiện trên Hình 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:klein"
+
+\end_inset
+
+. Các giá trị đã được chuẩn hóa theo giá trị tiết diện phản ứng cực đại được tính theo hướng của photon. Ở mức năng lượng cao (
+\begin_inset Formula $\geq$
+\end_inset
+
+ 1 MeV) hầu hết các tia bức xạ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ tán xạ ở một góc rất nhỏ. Tuy nhiên, ở năng lượng thấp, các tia 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ có thể tán xạ ở các góc lớn hơn.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename baocao_lyx/figure/fig_cosolythuyet/klein.pdf
+	width 80text%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Standard
+Tán xạ Compton của các tia bức xạ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ theo công thức Klein-Nishina cho khoảng năng lượng từ 200 KeV đến 2 MeV.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:klein"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

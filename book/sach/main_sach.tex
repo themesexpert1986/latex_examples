@@ -1,0 +1,167 @@
+\documentclass[12pt]{extbook}
+
+% phông chữ Time New Roman
+\usepackage{times}
+\usepackage{mathptmx}
+
+% lựa chọn ngôn ngữ soạn thảo
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+
+% kích thước trang văn bản và căn lề
+\usepackage[paperwidth=160mm, paperheight=240mm, bottom = 1.8cm, top = 2.5cm, inner = 2cm, outer = 2cm, headsep= \baselineskip]{geometry}%*\label{line:lvSach_main_geometry}*)
+% công thức toán học và hình vẽ
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+
+% danh mục từ viết tắt
+\usepackage{nomencl}
+
+% thụt đầu dòng
+\usepackage{indentfirst} 
+
+% xác lập tiêu đề chạy
+\usepackage{fancyhdr}
+
+% vẽ hình bằng lệnh latex
+\usepackage{tikz}
+
+% tính toán
+\usetikzlibrary{calc}
+
+% hình nền của trang văn bản, ví dụ khung vuông bao quanh trang bìa
+\usepackage{eso-pic}
+
+% tạo phụ lục
+\usepackage[toc, page]{appendix}
+
+% xác lập định dạng tiêu đề của hình vẽ, bảng biểu
+\usepackage[hypcap=true, labelfont=bf, labelsep=colon, skip = 0.5\baselineskip, tableposition=top, figureposition=bottom]{caption}%*\label{line:lvSach_main_caption}\xdyIndex{gói lệnh!caption}*) 
+ 
+ % khoảng cách giữa phần bảng biểu, hình vẽ và phần văn bản
+\setlength{\intextsep}{\baselineskip}%*\label{line:lvSach_main_intextsep}\xdyIndex{intextsep@\spverb\intextsep}*) 
+
+% thay đổi lại định dạng Mục lục
+\usepackage{titletoc}%*\label{line:lvSach_main_titletoc}*) 
+
+% tạo Muc luc cho tung chuong
+\usepackage[vietnam]{minitoc} %*\label{line:lvSach_main_minitoc}*) 
+
+% tạo Danh mục tài liệu tham khảo cho từng chương. Khai báo này phải 	
+% đặt trước khai báo gói lệnh hyperref
+\usepackage[sectionbib]{chapterbib}%*\label{line:lvSach_main_chapterbib}*) 
+
+% tạo Chỉ mục
+\usepackage{makeidx}%*\label{line:lvSach_main_makeidx}*) 
+\usepackage[columns=3, rule = 1pt]{idxlayout}%*\label{line:lvSach_main_idxlayout}*) 
+\makeindex%*\label{line:lvSach_main_makeidx_use}*) 
+
+% thay đổi lệnh \index
+\newcommand{\xdyIndex}[1]{\index{\detokenize{#1}}}%*\label{line:lvSach_main_xdyIndex}*)
+
+% tạo liên kết khi thực hiện chỉ dẫn chéo
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode, hyperindex]{hyperref}
+% khi tạo bản in ta sử dụng khai báo thay thế
+% \usepackage{xcolor} % sử dụng khai báo màu
+% \usepackage[colorlinks, linkcolor = black, citecolor = black, urlcolor = black,  breaklinks, pdfencoding=unicode, hyperindex]{hyperref}
+
+\input{definition/definition.tex}
+
+ \title{Cấu trúc hạt nhân}
+ \author{TS. Nguyễn Văn A}
+ 
+
+
+
+% bắt đầu phần nội dung của sách
+\begin{document}  
+ 
+\dominitoc%*\label{line:lvSach_main_dominitoc}*)
+
+\frontmatter
+
+ \pagestyle{empty}
+  
+ \maketitle
+ \cleardoublepage
+ 
+ \maketitleBialot
+ \cleardoublepage
+ 
+ \maketitleBiaphu
+ \cleardoublepage
+
+ \input{texfile/loinoidau}
+
+\clearHeading
+\setcounter{page}{1}
+
+\pagestyle{tocstyle}%*\label{line:lvSach_main_tocstyle}*) 
+\tableofcontents
+\clearHeading
+  
+\phantomsection
+\makenomenclature
+\renewcommand{\nomname}{Danh mục các từ viết tắt và các ký hiệu toán học}
+\pagestyle{nomenclstyle}%*\label{line:lvSach_main_nomenclstyle}*) 
+\mtcaddchapter[\nomname]%*\label{line:lvSach_main_mtcaddchapter_nomname}*) 
+\printnomenclature
+\clearHeading
+			
+\phantomsection
+\renewcommand{\listfigurename}{Danh mục các hình vẽ}
+\pagestyle{lofstyle}%*\label{line:lvSach_main_lofstyle}*) 
+\mtcaddchapter[\listfigurename]%*\label{line:lvSach_main_mtcaddchapter_listfigurename}*) 
+\listoffigures
+\clearHeading
+
+\phantomsection     
+\renewcommand{\listtablename}{Danh mục các bảng biểu}
+\pagestyle{lotstyle}%*\label{line:lvSach_main_lotstyle}*) 
+\mtcaddchapter[\listtablename]%*\label{line:lvSach_main_mtcaddchapter_listtablename}*) 
+\listoftables
+\clearHeading
+
+ \pagestyle{normalstyle}%*\label{line:lvSach_main_normalstyle}*) 
+ 
+ 
+ 
+\mainmatter
+	 
+	\include{texfile/modau}
+	\clearHeading
+	 
+	\include{texfile/tongquan}
+	\clearHeading
+
+	\include{texfile/doituongnghiencuu}
+	\clearHeading
+
+	\include{texfile/ketquavathaoluan}	
+	\clearHeading
+	
+	\include{texfile/ketluan}
+	\clearHeading
+
+
+	\renewcommand{\chaptername}{\appendixname}
+ 	\renewcommand{\appendixtocname}{Phụ lục}
+	\renewcommand{\appendixpagename}{Phụ lục}%*\label{line:lvSach_main_appendixpagename}*)
+  	\appendix
+  	\appendixpage %*\label{line:lvSach_main_appendixpage}*)
+	
+		\include{texfile/phuluc_cacdothi}
+		\clearHeading
+ 		\include{texfile/phuluc_cacsolieu}
+ 		\clearHeading
+\backmatter
+
+	\phantomsection
+	\renewcommand{\indexname}{Chỉ mục}
+	\pagestyle{indexstyle}%*\label{line:lvSach_main_indexstyle}*) 
+	\mtcaddchapter[\indexname]%*\label{line:lvSach_main_mtcaddchapter_indexname}*) 
+	\printindex%*\label{line:lvSach_main_mtcaddchapter_printindex}*)   
+    
+\end{document}

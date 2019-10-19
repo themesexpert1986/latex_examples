@@ -1,0 +1,88 @@
+\documentclass[11pt, a4paper, bold, center, twoside, noheadline, journal]{paper}%*\label{line:baibao_standalone_simple_main_documentclass}*)
+
+ % căn lề
+\usepackage[bottom = 2.5cm, top = 2.5cm, inner= 2cm, outer = 1.5cm]{geometry}%*\label{line:baibao_standalone_simple_main_geometry}*)
+
+% ngôn ngữ soạn thảo
+\usepackage[utf8]{inputenc} 
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese]{babel}
+ 
+% hình vẽ và công thức toán học
+\usepackage{amssymb, amsthm}
+\usepackage[intlimits]{mathtools}
+\usepackage{graphicx}
+  
+% phông chữ Time New Roman
+\usepackage{times}
+\usepackage{mathptmx}
+
+\usepackage{cmap} % cho phép tìm kiếm trên tệp .pdf tạo thành
+\usepackage{perpage}% đánh số các ký hiệu footnote theo từng trang
+	\MakePerPage{footnote}
+\usepackage{indentfirst}
+
+
+% tạo liên kết trong tệp *.pdf 
+\usepackage[colorlinks, breaklinks, pdfencoding=unicode]{hyperref}
+%\usepackage{xcolor}
+%\usepackage[colorlinks, linkcolor = black, citecolor = black, urlcolor = black,  breaklinks, pdfencoding=unicode]{hyperref}%*\label{line:baibao_standalone_simple_main_hyperref}*)
+
+
+% gói lệnh standalone để không biên dịch phần đầu của tệp nguồn tương 	 ứng với các bài báo riêng lẻ
+\usepackage{standalone}%*\label{line:baibao_standalone_simple_main_standalone}*)
+
+% đưa các bài báo vào trong tệp tin chính
+\usepackage{import}
+
+% thay dổi lại một số thông số 
+\setlength{\beforetitlespace}{0cm}%*\label{line:baibao_standalone_simple_main_setlength}*)
+
+% bỏ các tiêu đề chạy trên các trang trống
+\newcommand{\clearHeading}{%*\label{line:baibao_standalone_simple_main_clearHeading}*)
+	\clearpage
+	\thispagestyle{empty}	
+	\cleardoublepage      
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\renewcommand{\contentsname}{Danh sách các bài báo}%*\label{line:baibao_standalone_simple_main_contentsname}*)
+\renewcommand{\abstractname}{Tóm tắt}%*\xdyIndex{absractname@\spverb\abstractname}*)
+\renewcommand{\keywordname}{\textbf{Từ khóa}}%*\xdyIndex{keywordname@\spverb\keywordname}*)
+\renewcommand{\figureshortname}{Hình}%*\xdyIndex{figureshortname@\spverb\figureshortname}*)
+\renewcommand{\tableshortname}{Bảng}%*\label{line:baibao_standalone_simple_main_tableshortname}\xdyIndex{tableshortname@\spverb\tableshortname}*)
+\renewcommand{\refname}{Tài liệu tham khảo}%*\xdyIndex{refname@\spverb\refname}*)
+
+% trang bìa của tạp chí
+\begin{titlepage} %*\label{line:baibao_standalone_simple_main_titlepage}*)
+\newgeometry{top=2cm, bottom=2cm, left=2cm, right=2cm}	
+	\begin{center}
+		\bfseries
+		{\Large Viện Năng lượng nguyên tử\\
+		\rule{0.6\textwidth}{1.pt}} 
+		\vfill
+		{\Huge Tạp chí Khoa học và Công nghệ hạt nhân} 
+		\vfill
+		{\large Vol. 5, No.4 (2016)}
+\end{center} 
+\clearHeading
+\end{titlepage}%*\label{line:baibao_standalone_simple_main_titlepage_end}*)
+
+
+ % Mục lục
+\thispagestyle{plain}%*\label{line:baibao_standalone_simple_main_thispagestyle}*)
+\journalcontents
+\clearHeading
+\subimport{input/dqtuyen/}{dqtuyen.tex}%*\label{line:baibao_standalone_simple_main_dqtuyen}*)
+\subimport{input/dqtuyen/}{dqtuyen.bbl}
+\clearHeading
+
+\subimport{input/ttvien/}{ttvien.tex}
+\subimport{input/ttvien/}{ttvien.bbl}%*\label{line:baibao_standalone_simple_main_ttvien}*)
+\clearHeading
+
+\end{document}

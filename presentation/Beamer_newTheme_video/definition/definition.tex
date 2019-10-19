@@ -1,0 +1,93 @@
+% Hiển thị Mục lục khi bắt đầu một Mục mới
+\AtBeginSection[] 
+{
+\begin{frame}{Các nội dung chính}
+  \tableofcontents[currentsection]
+\end{frame}
+\addtocounter{framenumber}{-1}
+}
+
+% %%% Căn lề %%%%%%%%%
+\setbeamersize{text margin left = 10pt}
+\setbeamersize{text margin right=20pt}
+
+% Thanh dọc bên trái của slide %%%%%%%%
+\setbeamersize{sidebar width left=0.03\paperwidth}
+\setbeamertemplate{sidebar canvas left}[vertical shading][middle=blue!10!green!70]
+
+
+%%% Tiêu đề %%%%%%%%%%
+\setbeamerfont{title}{size = \Large, shape=\bfseries, family=\rmfamily}
+\setbeamercolor{title}{fg=red!80!black, bg=blue!5!white}
+
+%% Tiêu đề hiển thị trong phần chú thích %%
+\setbeamercolor{title in head/foot}{fg=red!50!black!50}
+\setbeamerfont{title in head/foot}{size = \footnotesize, shape=\slshape,family=\rmfamily}
+
+
+%%% Tên tác giả %%%%%
+\setbeamercolor{author}{fg=blue!80!black}
+\setbeamerfont{author}{shape=\bfseries, family=\rmfamily}
+
+%% Tên tác giả hiển thị trong phần chú thích %%
+\setbeamercolor{author in head/foot}{fg=blue!70!black!50}
+\setbeamerfont{author in head/foot}{size = \footnotesize, shape=\slshape, family=\rmfamily}
+
+
+%% Ngày, tháng %%
+\setbeamercolor{date}{fg=blue!80!black}
+\setbeamerfont{date}{size=\scriptsize, shape=\bfseries,family=\rmfamily}
+
+%% ngày tháng hiển thị trong phần chú thích %%
+\setbeamercolor{date in head/foot}{fg=blue!50!black!50}
+\setbeamerfont{date in head/foot}{shape=\slshape, family=\rmfamily}
+
+
+%% Địa chỉ %%%%%
+\setbeamercolor{institute}{fg=blue!80!black}
+\setbeamerfont{institute}{size=\scriptsize, shape=\bfseries,family=\rmfamily}
+
+
+%% Tiêu đề của Mục trong Mục lục%%%
+\setbeamertemplate{section in toc}[ball unnumbered]
+\setbeamercolor{section in toc}{fg=red!80!black}
+\setbeamerfont{section in toc}{shape=\bfseries, family=\rmfamily, size = \large}
+
+%% Tiêu đề của tiểu Mục trong Mục lục%%%
+\setbeamertemplate{subsection in toc}[ball unnumbered]
+\setbeamercolor{subsection in toc}{fg=blue!80!black}
+\setbeamerfont{subsection in toc}{shape=\bfseries, family=\rmfamily}
+
+
+%% Tiêu đề của các slide %%%%%%	
+\setbeamertemplate{frametitle}{
+ \vspace{5pt}
+ \insertframetitle \hfill \color{red!50} \footnotesize\tdtime
+ \vspace{1pt}
+ \hrule
+}
+\setbeamercolor{frametitle}{fg=red!80!black}
+\setbeamerfont{frametitle}{size=\Large, series=\bfseries, family=\rmfamily}
+
+
+%% Phần nội dung chú thích phía dưới các slide %%%
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[leftskip=0.2\paperwidth, rightskip=0.02\paperwidth]{author in head/foot}
+	\usebeamerfont{author in head/foot}\insertshortauthor
+	\hfill
+   	\usebeamerfont{title in head/foot}\insertshorttitle
+    \hfill
+    {\bfseries\normalsize\color{red!50}\insertframenumber/\inserttotalframenumber}
+ \end{beamercolorbox}
+}
+
+
+%% Định dạng của môi trường  block %%%
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\setbeamercolor{block title}{ bg=green!5!white, fg=red!80!black}
+\setbeamerfont{block title}{size=\small, shape=\bfseries, family=\rmfamily}
+
+\setbeamercolor{block body}{ fg=blue!80!black}
+\setbeamerfont{block body}{size=\footnotesize, family=\rmfamily}
